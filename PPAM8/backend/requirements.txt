@@ -1,0 +1,12 @@
+Flask
+Flask-SQLAlchemy
+Flask-Cors
+Flask-Migrate
+Flask-Mail
+Werkzeug
+celery
+redis
+SQLAlchemy
+alembic
+python-dotenv
+Flask-Caching

@@ -15,6 +15,10 @@ PS J:\MAD3 TEST\mad3 test\backend> pip install flask-cors
 # inside backend folder
 python -m venv venv
 
+# inside frontend folder
+cd frontend
+npm install
+
 # Redis Celery code
 # run inside backend
 pip install redis
@@ -24,3 +28,25 @@ pip install celery flask-mail
 python -m celery -A celery_app:celery worker --loglevel=info --pool=solo
 # open inside a new backend terminal -- Terminal 2 — Celery Beat:
 python -m celery -A celery_app:celery beat --loglevel=info
+
+#FINAL SHORT VERSION 
+cd backend
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+
+
+cd frontend
+npm install
+npm run serve
+
+cd backend
+.venv\Scripts\activate
+python app.py
+
+# now in total we run this in 4 terminals
+# open inside a new backend terminal -- Terminal 1 — Celery worker: 
+python -m celery -A celery_app:celery worker --loglevel=info --pool=solo
+# open inside a new backend terminal -- Terminal 2 — Celery Beat:
+python -m celery -A celery_app:celery beat --loglevel=info
+

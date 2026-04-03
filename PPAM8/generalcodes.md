@@ -23,6 +23,7 @@ npm install
 # run inside backend
 pip install redis
 pip install celery flask-mail
+pip install Flask-Caching redis
 
 # open inside a new backend terminal -- Terminal 1 — Celery worker: 
 python -m celery -A celery_app:celery worker --loglevel=info --pool=solo
@@ -50,3 +51,6 @@ python -m celery -A celery_app:celery worker --loglevel=info --pool=solo
 # open inside a new backend terminal -- Terminal 2 — Celery Beat:
 python -m celery -A celery_app:celery beat --loglevel=info
 
+# DEBUG remember to run powershell as administrator(very important if services stop abruptly)
+Get-Service Memurai
+Start-Service Memurai
