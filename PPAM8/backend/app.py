@@ -35,7 +35,7 @@ cache = Cache(app)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'email@gmail.com'
+app.config['MAIL_USERNAME'] = 'useremail@gmail.com'
 app.config['MAIL_PASSWORD'] = 'app generated password'
 
 mail = Mail(app)
